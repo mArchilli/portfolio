@@ -37,19 +37,19 @@ export function Header() {
       {/* Navegación para escritorio */}
       <nav className="ml-auto hidden lg:flex gap-4 sm:gap-6">
         <a
-          className="text-sm font-medium hover:underline underline-offset-4 text-black"
+          className="text-sm font-medium hover:underline underline-offset-4 text-black hover:text-black"
           href="#projects"
         >
           Projects
         </a>
         <a
-          className="text-sm font-medium hover:underline underline-offset-4 text-black"
+          className="text-sm font-medium hover:underline underline-offset-4 text-black hover:text-black"
           href="#skills"
         >
           Skills
         </a>
         <a
-          className="text-sm font-medium hover:underline underline-offset-4 text-black"
+          className="text-sm font-medium hover:underline underline-offset-4 text-black hover:text-black"
           href="#contact"
         >
           Contact
