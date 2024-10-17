@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export function CardTitle({ children, className = '', ...props }) {
   return (
-    <h3 className={`text-lg font-semibold text-black ${className}`} {...props}>
+    <h3 className={`text-lg font-semibold text-black text-center ${className}`} {...props}>
       {children}
     </h3>
   );
