@@ -78,7 +78,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-200">
       <div className="container px-4 md:px-6 mx-auto">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-black">Contact Me</h2>
         <div className="max-w-md mx-auto space-y-4">
