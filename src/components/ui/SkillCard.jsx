@@ -1,40 +1,34 @@
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import Card from './Card';
 import { CardHeader } from './CardHeader';
 import { CardTitle } from './CardTitle';
 import { CardContent } from './CardContent';
-import { Progress } from './Progress';
 
 export function SkillCard({ title, skills }) {
   return (
     <Card className="transform transition-transform duration-200 hover:scale-105">
-      <CardHeader className="bg-gray-50">
+      <CardHeader className="bg-gray-50 flex justify-between items-center">
         <CardTitle>{title}</CardTitle>
+        <span className="text-xs font-semibold text-white bg-blue-500 px-2 py-1 rounded">Junior</span>
       </CardHeader>
       <CardContent>
-        {skills.map((skill, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-sm font-medium text-black">{skill.name}</span>
-              <span className="text-sm font-medium text-gray-500">{skill.level}%</span>
-            </div>
-            <Progress value={skill.level} max={100} />
-          </div>
-        ))}
+        <ul className="list-disc pl-5">
+          {skills.map((skill, index) => (
+            <li key={index} className="text-sm font-medium text-black mb-1">{skill.name}</li>
+          ))}
+        </ul>
       </CardContent>
     </Card>
   );
 }
 
-// Validación de props
 SkillCard.propTypes = {
-  title: PropTypes.string.isRequired, // title debe ser una cadena
+  title: PropTypes.string.isRequired,
   skills: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired, // name debe ser una cadena
-      level: PropTypes.number.isRequired,  // level debe ser un número
+      name: PropTypes.string.isRequired,
     })
-  ).isRequired, // skills debe ser un array de objetos
+  ).isRequired,
 };
 
 export default SkillCard;
